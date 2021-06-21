@@ -1,0 +1,169 @@
+:root {
+
+  --blue: #1c8a7b;
+  --light-blue: #21a896;
+  --dark-blue: #187467;
+  --red: #8a1c1c;
+  --green: #3b8a1c;
+
+  --white: #e6eeed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: var(--blue);
+}
+
+.nav-items{
+  display: flex;
+}
+
+.nav-item {
+  color: var(--white);
+  margin: 10px;
+  text-decoration: none;
+}
+
+.nav-item-logo {
+  font-weight: 600;
+}
+
+.nav-hamburger {
+  display: none;
+  cursor: pointer;
+
+}
+
+.nav-collapse {
+  display: none;
+}
+
+.nav-collapse.open {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.shopping-list {
+  list-style: none;
+}
+
+.modal-btn {
+  background-color: var(--dark-blue);
+  margin: 2rem 0;
+}
+
+.add-btn {
+  background-color: var(--light-blue);
+  margin: 15px 0;
+}
+
+.done-btn {
+  background-color: var(--green);
+}
+
+.del-btn {
+  background-color: var(--red);
+}
+
+.item {
+  margin: 5px 0;
+}
+
+.item .btn {  
+  margin: 0 5px;
+}
+
+
+.item-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  border-radius: 5px;
+  color: var(--white);
+  width: 300px;
+  padding: 15px 10px;
+  padding-top: 0;
+  position: absolute;
+  background-color: var(--dark-blue);
+  transition: 0.2s;
+}
+
+.modal.show {
+  margin-top: 500px;
+
+}
+
+.modal.hide {
+  margin-top: -500px;
+
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+}
+
+
+.modal-close-btn {
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: var(--white);
+}
+
+.modal-header {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .item-input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .nav-hamburger {
+    display: flex;
+    justify-content: right;
+  }
+}
