@@ -1,5 +1,11 @@
 const mongoose = require("mongoose");
-const db = require("./keys").mongoURI;
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const db = `mongodb+srv://
+            ${process.env.MONGO_USER}:${process.env.MONGO_PASS}
+            @shoppinglist.rey54.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 const connectDB = async () => {
   try {
