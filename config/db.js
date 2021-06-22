@@ -3,9 +3,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const db = `mongodb+srv://
-            ${process.env.MONGO_USER}:${process.env.MONGO_PASS}
-            @shoppinglist.rey54.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const db = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@shoppinglist.rey54.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 const connectDB = async () => {
   try {
@@ -13,6 +11,7 @@ const connectDB = async () => {
       db,
       {
         useNewUrlParser: true,
+        useCreateIndex: true,
         useUnifiedTopology: true
       }
     )

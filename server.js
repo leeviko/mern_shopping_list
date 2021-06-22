@@ -4,6 +4,7 @@ const path = require("path");
 const connectDB = require("./config/db");
 
 const items = require("./routes/api/items");
+const users = require("./routes/api/users");
 
 const app = express();
 
@@ -15,6 +16,7 @@ connectDB();
 
 // Use Routes
 app.use("/api/items", items);
+app.use("/api/users", users);
 
 // Serve static assets if in prod
 if(process.env.NODE_ENV === "production") {
